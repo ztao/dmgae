@@ -1,7 +1,7 @@
 import json
 import os
 import logging
-
+from datetime import datetime
 from google.appengine.ext import ndb
 
 import webapp2
@@ -40,8 +40,8 @@ class EventHandler(webapp2.RequestHandler):
         activity = Activity(
             parent=ndb.Key("Event", event_name),
             activityName=activity_obj["activityName"],
-            startDateTime=activity_obj["startDateTime"],
-            endDateTime=activity_obj["endDateTime"],
+            startDateTime=datetime.now(),
+            endDateTime=datetime.now(),
             routes=activity_obj["routes"],
             activityRelatedTips=activity_obj["activityRelatedTips"],
             generalHealthTips=activity_obj["generalHealthTips"],
@@ -49,4 +49,5 @@ class EventHandler(webapp2.RequestHandler):
             aidInfomations=activity_obj["aidInfomations"],
             dietRecommendations=activity_obj["dietRecommendations"],
             relationToOtherActivities=activity_obj["relationToOtherActivities"])
+        self.response.out.write(json.dumps({"200":"Activity stored successfully."}))
 

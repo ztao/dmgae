@@ -1,8 +1,3 @@
-curl -v -H "Accept: application/json" -H "Content-type:application/json" -X POST -d
-{
-	{"
-	"}
-} 
-
-http://localhost:8080/event/Hajj
-http:// 
+curl -v -H "Accept: application/json" -H "Content-type:application/json" -X POST -d '{"activityName": "An Activity", "startDateTime":null,
+"endDateTime":null, "routes": {"Train": "Soton to London"}, "activityRelatedTips": {"Mood":"Enjoy"}, "generalHealthTips": {}, "diabetesSpecificHealthTips": [], "aidInfomations":  [{"hospital":"RBH"}, {"pharmacy":"Boots"}], "dietRecommendations": ["salad","fish"], "relationToOtherActivities": false }' http://localhost:8080/event/Hajj
+http://diabeteselsewhere.appspot.com
