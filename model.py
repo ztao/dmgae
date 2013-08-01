@@ -3,8 +3,8 @@ from google.appengine.ext import ndb
 class Activity(ndb.Model):
     #build a model for each activity in an event
     activityName = ndb.StringProperty()
-    startDateTime = ndb.DateTimeProperty()
-    endDateTime = ndb.DateTimeProperty()
+    startDateTime = ndb.JsonProperty()
+    endDateTime = ndb.JsonProperty()
     # routes will be a list
     routes = ndb.JsonProperty()
     # weather = ndb.StringProperty()
