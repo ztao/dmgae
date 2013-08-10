@@ -1,29 +1,39 @@
 from google.appengine.ext import ndb
 
 class Place(ndb.Model):
-    name = ndb.StringProperrty()
+    name = ndb.StringProperty()
     location = ndb.GeoPtProperty()
-    weather = ndb.StringProperrty()
+    weather = ndb.StringProperty()
+
+class Relation(ndb.Model):
+    previous = ndb.StringProperty()
+    next = ndb.StringProperty()
+    xor = ndb.StringProperty()
 
 class Activity(ndb.Model):
-    name = ndb.StringProperrty()
-    start_date = ndb.DateTimeProperty()
-    duration = ndb.StringProperrty()
+    aid = ndb.IntegerProperty()
+    name = ndb.StringProperty()
+    start_date = ndb.StringProperty()
+    duration = ndb.StringProperty()
     place = ndb.StructuredProperty(Place)
     tips = ndb.TextProperty()
     relation = ndb.StructuredProperty(Relation)
 
-class Event(ndb.Model):
-    name = ndb.StringProperrty()
-    brief =  = ndb.StringProperty()
-    start_date = ndb.DateTimeProperty()
-    duration = ndb.StringProperrty()
+    @classmethod
+    def all_activities(cls, ancestor_key):
+        return cls.query(ancestor=ancestor_key).order(cls.aid)
+
+class EventModel(ndb.Model):
+
+    eid = ndb.IntegerProperty()
+    name = ndb.StringProperty()
+    brief = ndb.StringProperty()
+    start_date = ndb.StringProperty()
+    duration = ndb.StringProperty()
     activity_list = ndb.StructuredProperty(Activity, repeated=True)
-    before_you_go = ndb.TextProperty()
+    before_you_go = ndb.StringProperty(repeated=True)
     general_tips = ndb.TextProperty()
 
     @classmethod
-    def query_activity_list(cls, ancestor_key):
-        # ancestor_key will be the name of corresponding event
-        return cls.query(ancestor=ancestor_key).order(-cls.activity_list.start_date)
-
+    def all_events(cls):
+        return cls.query().order(cls.eid)
