@@ -1,0 +1,16 @@
+{
+    "eventList": [
+        {
+            "eventName": "Hajj",
+            "eventBrief": "Hajj is one of the five pillars of Islam and must be undertaken by every muslim once in their lifetime. Hajj involves tracing the journey of the Prophet Mohammed and undertaking predefined rituals over a period of 5 days. Hajj only occurs at certain times according to the 12th month of the Islamic lunar calendar."
+        },
+        {
+            "eventName": "Burning Man",
+            "eventBrief": "You belong here and you participate. You're not the weirdest kid in the classroom — there's always somebody there who's thought up something you never even considered. You're there to breathe art. Imagine an ice sculpture emitting glacial music — in the desert. Imagine the man, greeting you, neon and benevolence, watching over the community. You're here to build a community that needs you and relies on you."
+        },
+        {
+            "eventName": "Glastonbury Festival",
+            "eventBrief": "Glastonbury Festival is the largest greenfield music and performing arts festival in the world and a template for all the festivals that have come after it. The difference is that Glastonbury has all the best aspects of being at a Festival in one astonishing bundle."
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "Event Name": "Hajj",
+    "Event Brief": "",
+    "Start Date": "",
+    "Duration": "",
+    "General Tips": "",
+    "Before You Go": "",
+    "Activity List": [
+        {
+            "Name": "",
+            "Start Date": "",
+            "Duration": "",
+            "Place": {
+                "Name": "",
+                "Location": "",
+                "Weather": ""
+            },
+            "Tips": ""
+        },
+        {
+            "Name": "",
+            "Start Date": "",
+            "Duration": "",
+            "Place": {
+                "Name": "",
+                "Location": "",
+                "Weather": ""
+            },
+            "Tips": ""
+        },
+        {
+            "Name": "",
+            "Start Date": "",
+            "Duration": "",
+            "Place": {
+                "Name": "",
+                "Location": "",
+                "Weather": ""
+            },
+            "Tips": ""
+        }
+    ]
+}

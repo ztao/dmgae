@@ -13,5 +13,5 @@ indexes:
 - kind: Activity
   ancestor: yes
   properties:
-  - name: startDateTime
+  - name: createDateTime
     direction: desc
