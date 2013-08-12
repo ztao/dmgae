@@ -27,11 +27,11 @@ class EventModel(ndb.Model):
 
     eid = ndb.IntegerProperty()
     name = ndb.StringProperty()
-    brief = ndb.StringProperty()
+    brief = ndb.TextProperty()
     start_date = ndb.StringProperty()
     duration = ndb.StringProperty()
     activity_list = ndb.StructuredProperty(Activity, repeated=True)
-    before_you_go = ndb.StringProperty(repeated=True)
+    before_you_go = ndb.JsonProperty()
     general_tips = ndb.TextProperty()
 
     @classmethod
